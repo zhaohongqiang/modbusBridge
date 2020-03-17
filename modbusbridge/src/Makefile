@@ -1,5 +1,5 @@
 LIBS += -lmodbus
-CFLAGS=-Wall -Wpedantic -Wextra
+CFLAGS=-Wall -Wpedantic -Wextra -std=gnu99
 
 modbusbridge: modbusbridge.o
 	$(CC) $(CFLAGS) modbusbridge.o -o modbusbridge $(LIBS)

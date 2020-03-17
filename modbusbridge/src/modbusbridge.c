@@ -271,7 +271,7 @@ int main(int argc, char * argv[]) {
                             } else {
                                 data_start_index = modbus_get_header_length(rtu_context) - 1;
                                 raw_response_length = response_length - data_start_index - modbus_get_checksum_length(rtu_context);
-                                modbus_reply_raw_response(tcp_context, query, query_length, response + data_start_index, response_length);
+                                modbus_reply_raw_response(tcp_context, query, query_length, response + data_start_index, raw_response_length);
                             }
                         }
 
